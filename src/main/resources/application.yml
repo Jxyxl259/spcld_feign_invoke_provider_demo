@@ -1,0 +1,26 @@
+server:
+  port: 8001
+
+
+spring:
+   application:
+    name: microservice-order-provider
+
+
+eureka:
+  #客户端注册进eureka服务列表内
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+      #,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    # 此处配置服务名称
+    instance-id: microservice-order-provider:8001
+    # 当鼠标移到服务名称超链接上时，浏览器左下角显示ip地址
+    prefer-ip-address: true
+
+info:
+  app.name: order-provider-8001
+  company.name: www.jiangBUG.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
