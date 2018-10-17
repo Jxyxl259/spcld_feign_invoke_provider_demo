@@ -23,9 +23,9 @@ import java.util.*;
 public class OrderController {
 
 
-	@RequestMapping(value = "/order/add", method = RequestMethod.POST, consumes={"application/json;UTF-8","text/plain;UTF-8"}/*, produces={"application/json"}*/)
+	@RequestMapping(value = "/order/add", method = RequestMethod.POST, consumes={"application/json;charset=UTF-8","text/plain;charset=UTF-8","text/html;charset=utf-8"}/*, produces={"application/json"}*/)
 	@ResponseBody
-	public Order add(HttpServletRequest request, HttpServletResponse response, @RequestBody String order) {
+	public Order add(HttpServletRequest request, HttpServletResponse response, /*@RequestBody*/ String order) {
 
 		try {
 			ServletInputStream is = request.getInputStream();
